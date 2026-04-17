@@ -3,3 +3,5 @@ def saludar():
     print("hola GitHub")
 
 saludar()
+saludar()
+saludar()
