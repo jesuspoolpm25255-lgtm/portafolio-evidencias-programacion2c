@@ -1,25 +1,43 @@
 #Jesus pool
 def calcular_subtotal(precio, cantidad):
+    """
+    Calcula el subtotal de una compra multiplicando precio por cantidad.
+    """
     subtotal = precio * cantidad
     return subtotal
 
 def calcular_descuento(subtotal, porcentaje_descuento):
+    """
+    Calcula el monto en dinero que se descuenta del subtotal.
+    """
     descuento = subtotal * porcentaje_descuento / 100
     return descuento
 
 def subtotal_con_descuento(subtotal, descuento):
+    """
+    Resta el monto del descuento al subtotal original.
+    """
     subtotal_descontado = subtotal - descuento
     return subtotal_descontado
 
 def calcular_iva(subtotal_descontado, porcentaje_iva):
+    """
+    Calcula el monto del IVA sobre el subtotal con descuento.
+    """
     iva = subtotal_descontado * porcentaje_iva / 100
     return iva
 
 def calcular_total(subtotal_descontado, iva):
+    """
+    Calcula el total final sumando el subtotal con descuento más el IVA.
+    """
     total = subtotal_descontado + iva
     return total
 
 def mostrar_ticket(precio, cantidad, desc_porc, iva_porc):
+    """
+    Orquesta todas las funciones de cálculo e imprime el ticket de compra.
+    """
     sub = calcular_subtotal(precio, cantidad)
     desc_monto = calcular_descuento(sub, desc_porc)
     sub_desc = subtotal_con_descuento(sub, desc_monto)
