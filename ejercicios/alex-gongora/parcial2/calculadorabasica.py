@@ -6,8 +6,9 @@ def suma(a,b):
 def resta(a,b):
     result = a - b
 
-    def multi(b,a):
-        return a * b
+def multi(b,a):
+    result= b * a
+    return result
 
 def div(a,b):
     return a / b
